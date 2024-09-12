@@ -19,6 +19,8 @@ function clearForm() {
     titleInput.value = '';
     descriptionInput.value = '';
     deleteButton.classList.add('hidden');
+    //deleteButton.removeAttribute('data-id');
+    saveButton.removeAttribute('data-id');
 }
 
 function displayNoteInForm(note) {
@@ -307,3 +309,4 @@ clearTheForm.addEventListener('click', function(){
 // });
 
 // getPaginationNotes(currentPage);
+

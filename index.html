@@ -7,32 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+   <nav class="navbar">
+      <div class="navbar__brand">
+          <h1>NotesApp</h1>
+      </div>
+      <div class="navbar__search">
+         <input type="text" id="searchInput" placeholder="Search Title and Description"/>
+         <button id="searchButton" class="btn-search">Search</button>
+      </div>
+  </nav>
     
    <div class="container">
-      <div class="notes__sidebar">
+      <button id="toggleAddTask" class="btn-toggle">Add Task</button>
+
+      <div class="notes__sidebar" id="addTaskSection">
          <input type="text" id="title" placeholder="Add title">
          <textarea id="description" placeholder="Add description"></textarea>
          <button id="btnSave">Save</button>
          <button id="btnDelete" class="btn-delete hidden">Delete</button>
          <button id="btnClear" class="btn-clear">Clear</button> 
-         <input type="text" id="searchInput" placeholder="Search Title and Description"/>
-         <button id="searchButton" class="btn-search">Search</button>
+         <!-- <input type="text" id="searchInput" placeholder="Search Title and Description"/>
+         <button id="searchButton" class="btn-search">Search</button> -->
 
-         <div>
-            <button id="prevPage">Previous Page</button>
-            <button id="nextPage">Next Page</button>
-            <select id="pageSizeSelect" class="pageSize">
-               <option value="5">5 per Page</option>
-               <option value="10" selected>10 Per Page</option>
-               <option value="20">20 Per Page</option>
-            </select>
-         </div>
       </div>
       <div class="notes__container" id="notes__container"> </div>
               
       </div>
-
       
+      <div class="paginationDiv">
+         <button id="prevPage">Previous Page</button>
+         <button id="nextPage">Next Page</button>
+         <select id="pageSizeSelect" class="pageSize">
+            <option value="5">5 per Page</option>
+            <option value="10" selected>10 Per Page</option>
+            <option value="20">20 Per Page</option>
+         </select>
+      </div>
+      <footer class="footer">
+         <p>&copy; Ali Haider Akib 2024 NotesApp. All rights reserved.</p>
+      </footer>
 
   <script src="script.js"></script>
 </body>
